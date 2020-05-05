@@ -15,7 +15,11 @@
                             {{tags separator=""}}
                         </div>
                         <div class="single_post_header_meta">
-                            <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+                            <span class="post-card-byline-date">
+                                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time> 
+                                <span class="bull">&bull;</span> 
+                                <span class="single_post_header_meta_reading_time">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+                            </span>
                         </div>
                         <div class="single_post_header_title">
                             <h1>{{title}}</h1>
@@ -31,6 +35,11 @@
                 </div>
             </div>
             <div class="single_post_comments">
+
+                {{!-- <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=YOUR_APP_ID&autoLogAppEvents=1"></script>
+                <div class="fb-comments" data-href="{{url absolute="true"}}" data-numposts="10" data-width="100%"></div> --}}
+
                 <div id="disqus_thread"></div>
                 <script>
                 (function() { // DON'T EDIT BELOW THIS LINE
@@ -55,10 +64,8 @@
     $(document).ready(function () {
         var featuredImage = $(".single_post_header").data("post-featured-image");
         $('.single_post_header').css('background', 'url(' + featuredImage + ')');
-        // FitVids - start
         var $postContent = $(".post-full-content");
         $postContent.fitVids();
-        // FitVids - end
     });
     var subheaderrender = false;
     $(window).scroll(function() {

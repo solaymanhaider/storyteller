@@ -16,8 +16,8 @@
                         <p>{{excerpt words="25"}}</p>
                     </div>
                     <div class="post_card_footer_meta">
-                        <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time></span><span class="post_card_reading_time">{{reading_time}}</span>
-                        <a class="post-card-content-link" href="{{url}}">Read More</a>
+                        <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time></span><span class="post_card_reading_time">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+                        <a class="post-card-content-link" href="{{url}}">{{t "Read More"}}</a>
                     </div>
                 </div>
             </div>

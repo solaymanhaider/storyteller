@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset "built/flex.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&display=swap" rel="stylesheet">
+    <link href="{{@site.url}}/assets/built/lang/{{@site.lang}}.css" rel="stylesheet">
 
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
@@ -32,7 +32,7 @@
                 <div class="row middle-sm">
                     <div class="col-sm-6 start-sm">
                         <div class="footer_copyright_text">
-                            &copy {{@site.title}} - All Rights Reserved
+                            &copy {{@site.title}} - {{t "All Rights Reserved"}}
                         </div>
                     </div>
                     <div class="col-sm-6 end-sm">
