@@ -1,6 +1,6 @@
 # Storyteller
 
-A modern and simple Ghost blog theme for story writers. Demo: [haider.blog](https://haider.blog/)
+A modern and simple Ghost blog theme for story writers. [DEMO](https://storyteller.demo.whitedigit.net/)
 
 ## Installation
 
