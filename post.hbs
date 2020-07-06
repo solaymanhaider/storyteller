@@ -16,8 +16,8 @@
                         </div>
                         <div class="single_post_header_meta">
                             <span class="post-card-byline-date">
-                                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time> 
-                                <span class="bull">&bull;</span> 
+                                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+                                <span class="bull">&bull;</span>
                                 <span class="single_post_header_meta_reading_time">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
                             </span>
                         </div>
@@ -39,8 +39,8 @@
             {{!-- {{> comments-facebook}} --}}
 
             {{!-- Disqus Comment --}}
-            {{!-- {{> comments-disqus}} --}}
-            
+            {{> comments-disqus}}
+
         </article>
     </div>
 </main>
