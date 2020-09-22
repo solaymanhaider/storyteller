@@ -2,7 +2,7 @@
     "name": "storyteller",
     "description": "A free ghost theme for story writers.",
     "demo": "https://haider.blog",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
@@ -21,6 +21,19 @@
     ],
     "config": {
         "posts_per_page": 5,
-        "image_sizes": {}
+        "image_sizes": {
+            "xs": {
+                "width": 100
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 500
+            },
+            "l": {
+                "width": 1000
+            }
+        }
     }
 }
