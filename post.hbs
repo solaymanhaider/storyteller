@@ -33,13 +33,27 @@
                         </div>
                     </section>
                 </div>
+                {{#get "posts" include="tags" limit="3" filter="id:-{{id}}+tag:{{primary_tag.slug}}" as |related|}}
+                    {{#if related}}
+                        <div class="single_post_related">
+                            <h3 class="related-title">{{t "Recommended for you:"}}</h3>
+                            <div class="single_post_related_posts">
+                                <div class="row">
+                                    {{#foreach related}}
+                                        {{> "post-card-related"}}
+                                    {{/foreach}}
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                {{/get}}
             </div>
 
             {{!-- Facebook Comment --}}
             {{!-- {{> comments-facebook}} --}}
 
             {{!-- Disqus Comment --}}
-            {{!-- {{> comments-disqus}} --}}
+            {{> comments-disqus}}
 
         </article>
     </div>
@@ -56,6 +70,7 @@
         $('.single_post_header').css('background', 'url(' + featuredImage + ')');
         var $postContent = $(".post-full-content");
         $postContent.fitVids();
+        loadPostCardFeaturedImages();
     });
     var subheaderrender = false;
     $(window).scroll(function() {
